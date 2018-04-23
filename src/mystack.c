@@ -7,7 +7,9 @@
 * must be free'ed using stack_delete(...)
 */
 MyStack* stack_create(){
-  return NULL;
+  MyStack* stack = (MyStack*)malloc(sizeof(MyStack));
+  stack->top = -1;
+  return stack;
 }
 
 /*
