@@ -7,20 +7,14 @@
 * must be free'ed using stack_delete(...)
 */
 MyStack* stack_create(){
-  MyStack* pStack = (MyStack*) malloc(sizeof(MyStack));
-  pStack->top = -1;
-  for (size_t i = 0; i < MAX_STACK_SIZE; i++) {
-    pStack->data[i] = 0;
-  }
-  return pStack;
+  return NULL;
 }
 
 /*
 * deletes a given stack
 */
 void stack_delete(MyStack* stack){
-  free(stack);
-  stack = (MyStack*)NULL;
+
 }
 
 /*
@@ -29,9 +23,7 @@ void stack_delete(MyStack* stack){
 * returns false if not (the stack is full)
 */
 bool stack_push(MyStack* pStack, int data){
-  pStack->top++;
-  pStack->data[pStack->top] = data;
-  return true;
+  return false;
 }
 
 /*
@@ -41,9 +33,7 @@ bool stack_push(MyStack* pStack, int data){
 * returns false if the stack was empty
 */
 bool stack_pop(MyStack* pStack, int* value){
-  *value = pStack->data[pStack->top];
-  pStack->top--;
-  return true;
+  return false;
 }
 
 /*
@@ -53,8 +43,7 @@ bool stack_pop(MyStack* pStack, int* value){
 * returns false if the stack was empty
 */
 bool stack_peek(MyStack* stack, int* value){
-  *value = stack->data[stack->top];
-  return true;
+  return false;
 }
 
 /*
