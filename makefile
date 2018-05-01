@@ -10,7 +10,7 @@ VFLAGS += --tool=memcheck
 VFLAGS += --leak-check=full
 VFLAGS += --error-exitcode=1
 
-test: tests.out
+test, all: tests.out
 	@./tests.out
 
 memcheck: tests.out
