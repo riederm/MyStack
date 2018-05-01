@@ -5,6 +5,8 @@ CFLAGS += -Wextra
 CFLAGS += -pedantic
 #CFLAGS += -Werror
 
+CC = gcc
+
 VFLAGS  = --quiet
 VFLAGS += --tool=memcheck
 VFLAGS += --leak-check=full
