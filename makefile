@@ -1,5 +1,7 @@
 CFLAGS  = -std=c99
 CFLAGS += -g
+CFLAGS += -fprofile-arcs
+CFLAGS += -ftest-coverage
 #CFLAGS += -Wall
 #CFLAGS += -Wextra
 #CFLAGS += -pedantic
@@ -14,6 +16,7 @@ VFLAGS += --error-exitcode=1
 
 test, all: tests.out
 	@./tests.out
+	gcov mystack.c
 
 memcheck: tests.out
 	@valgrind $(VFLAGS) ./tests.out

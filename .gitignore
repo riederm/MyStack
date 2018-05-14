@@ -1,2 +1,5 @@
 tests.out
 tests.out.dSYM/
+*.gcov
+*.gcda
+*.gcno
