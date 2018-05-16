@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #define SinvollerName -1
 /*
-* instantiate       s a new stack and returns a pointer to it.
+* instantiates a new stack and returns a pointer to it.
 * must be free'ed using stack_delete(...)
 *
 */
