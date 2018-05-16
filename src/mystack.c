@@ -2,13 +2,15 @@
 #include <stddef.h>
 #include <stdlib.h>
 
+#define INITIAL_STACK_TOP -1
+
 /*
 * instantiates a new stack and returns a pointer to it.
 * must be free'ed using stack_delete(...)
 */
 MyStack* stack_create(){
   MyStack* stack = (MyStack*)malloc(sizeof(MyStack));
-  stack->top = -1;
+  stack->top = INITIAL_STACK_TOP;
   return stack;
 }
 
