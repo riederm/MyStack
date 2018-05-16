@@ -1,14 +1,15 @@
 #include "mystack.h"
 #include <stddef.h>
 #include <stdlib.h>
-
+#define SinvollerName -1
 /*
-* instantiates a new stack and returns a pointer to it.
+* instantiate       s a new stack and returns a pointer to it.
 * must be free'ed using stack_delete(...)
+*
 */
 MyStack* stack_create(){
   MyStack* stack = (MyStack*)malloc(sizeof(MyStack));
-  stack->top = -1;
+  stack->top = SinvollerName;
   return stack;
 }
 
